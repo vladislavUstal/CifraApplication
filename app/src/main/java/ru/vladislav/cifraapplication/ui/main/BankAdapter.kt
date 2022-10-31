@@ -8,7 +8,10 @@ import androidx.viewbinding.ViewBinding
 import ru.vladislav.cifraapplication.data.model.Bank
 import ru.vladislav.cifraapplication.databinding.ItemBankBinding
 
-class BankAdapter(private var bankList: List<Bank>) :
+class BankAdapter(
+    private var bankList: List<Bank> = listOf(),
+    private val bankInterface: BankInterface
+) :
     RecyclerView.Adapter<BankAdapter.ViewHolder>() {
 
     fun refresh(_bankList: List<Bank>) {
@@ -25,8 +28,21 @@ class BankAdapter(private var bankList: List<Bank>) :
         abstract fun bind(item: Bank)
     }
 
+    override fun onViewAttachedToWindow(holder: ViewHolder) {
+        super.onViewAttachedToWindow(holder)
+        val position = holder.adapterPosition
+        if (holder is MainViewHolder)
+            holder.binding.btnConnect.setOnClickListener { bankInterface.onClickBank(bankList[position]) }
+    }
+
+    override fun onViewDetachedFromWindow(holder: ViewHolder) {
+        super.onViewDetachedFromWindow(holder)
+        if (holder is MainViewHolder)
+            holder.binding.btnConnect.setOnClickListener(null)
+    }
+
     class MainViewHolder(
-        private val binding: ItemBankBinding,
+        val binding: ItemBankBinding,
     ) : ViewHolder(binding) {
 
         override fun bind(item: Bank) = with(binding) {
@@ -76,4 +92,8 @@ class BankAdapter(private var bankList: List<Bank>) :
 
     }
 
+}
+
+interface BankInterface {
+    fun onClickBank(bank: Bank)
 }

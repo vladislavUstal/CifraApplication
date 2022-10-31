@@ -2,14 +2,23 @@ package ru.vladislav.cifraapplication.ui.main
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.viewModels
 import ru.vladislav.cifraapplication.R
+import ru.vladislav.cifraapplication.data.model.Bank
 import ru.vladislav.cifraapplication.databinding.FragmentMainBinding
 import ru.vladislav.cifraapplication.ui.base.BaseFragment
 
 class MainFragment : BaseFragment<FragmentMainBinding>() {
 
-    private val bankAdapter = BankAdapter(listOf())
+    private val bankAdapter = BankAdapter(
+        bankInterface = object : BankInterface {
+            override fun onClickBank(bank: Bank) {
+                Toast.makeText(requireContext(), "onBankClick ${bank.bank}", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+    )
 
     private val viewModel: MainViewModel by viewModels()
 
