@@ -1,4 +1,4 @@
-package ru.vladislav.cifraapplication.data.retrofit.api
+package ru.vladislav.cifraapplication.data.api
 
 import io.reactivex.Single
 import retrofit2.Response

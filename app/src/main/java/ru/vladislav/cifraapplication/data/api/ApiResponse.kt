@@ -1,4 +1,4 @@
-package ru.vladislav.cifraapplication.data.model
+package ru.vladislav.cifraapplication.data.api
 
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken

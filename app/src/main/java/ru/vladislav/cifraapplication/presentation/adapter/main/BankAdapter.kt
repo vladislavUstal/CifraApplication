@@ -1,4 +1,4 @@
-package ru.vladislav.cifraapplication.ui.main
+package ru.vladislav.cifraapplication.presentation.adapter.main
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

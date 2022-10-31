@@ -10,7 +10,7 @@ import dagger.Provides
 import okhttp3.Cache
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
-import ru.vladislav.cifraapplication.data.retrofit.services.RetrofitService
+import ru.vladislav.cifraapplication.data.source.remote.RetrofitService
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
@@ -42,7 +42,7 @@ open class RetrofitModule {
             OkHttpClient.Builder()
                 .cache(cache)
                 .addInterceptor(interceptor)
-                .connectTimeout(10, TimeUnit.SECONDS)
+                .connectTimeout(20, TimeUnit.SECONDS)
                 .writeTimeout(60, TimeUnit.SECONDS)
                 .readTimeout(60, TimeUnit.SECONDS)
         return client.build()

@@ -2,9 +2,9 @@ package ru.vladislav.cifraapplication.di.modules
 
 import dagger.Module
 import dagger.Provides
-import ru.vladislav.cifraapplication.data.retrofit.services.RetrofitService
-import ru.vladislav.cifraapplication.repositories.IBankRepository
-import ru.vladislav.cifraapplication.repositories.implementation.BankRepositoryImpl
+import ru.vladislav.cifraapplication.data.repositories.remote.BankRepositoryImpl
+import ru.vladislav.cifraapplication.data.source.remote.RetrofitService
+import ru.vladislav.cifraapplication.domain.repositories.IBankRepository
 
 @Module
 open class RepositoryModule {

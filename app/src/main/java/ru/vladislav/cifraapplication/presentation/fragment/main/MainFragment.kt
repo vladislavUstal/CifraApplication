@@ -1,4 +1,4 @@
-package ru.vladislav.cifraapplication.ui.main
+package ru.vladislav.cifraapplication.presentation.fragment.main
 
 import android.os.Bundle
 import android.view.View
@@ -7,7 +7,10 @@ import androidx.fragment.app.viewModels
 import ru.vladislav.cifraapplication.R
 import ru.vladislav.cifraapplication.data.model.Bank
 import ru.vladislav.cifraapplication.databinding.FragmentMainBinding
-import ru.vladislav.cifraapplication.ui.base.BaseFragment
+import ru.vladislav.cifraapplication.presentation.adapter.main.BankAdapter
+import ru.vladislav.cifraapplication.presentation.adapter.main.BankInterface
+import ru.vladislav.cifraapplication.presentation.base.BaseFragment
+import ru.vladislav.cifraapplication.presentation.viewModel.main.MainViewModel
 
 class MainFragment : BaseFragment<FragmentMainBinding>() {
 

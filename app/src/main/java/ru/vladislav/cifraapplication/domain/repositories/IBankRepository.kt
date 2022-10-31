@@ -1,4 +1,4 @@
-package ru.vladislav.cifraapplication.repositories
+package ru.vladislav.cifraapplication.domain.repositories
 
 import io.reactivex.Single
 import retrofit2.Response

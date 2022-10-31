@@ -1,4 +1,4 @@
-package ru.vladislav.cifraapplication.ui.base
+package ru.vladislav.cifraapplication.presentation.base
 
 import android.os.Bundle
 import android.view.LayoutInflater

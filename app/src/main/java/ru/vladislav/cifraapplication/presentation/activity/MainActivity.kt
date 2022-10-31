@@ -1,9 +1,9 @@
-package ru.vladislav.cifraapplication
+package ru.vladislav.cifraapplication.presentation.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import ru.vladislav.cifraapplication.databinding.ActivityMainBinding
-import ru.vladislav.cifraapplication.ui.main.MainFragment
+import ru.vladislav.cifraapplication.presentation.fragment.main.MainFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

@@ -1,11 +1,11 @@
-package ru.vladislav.cifraapplication.data.retrofit.services
+package ru.vladislav.cifraapplication.data.source.remote
 
 import com.google.gson.Gson
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import ru.vladislav.cifraapplication.data.retrofit.api.CifraApi
+import ru.vladislav.cifraapplication.data.api.CifraApi
 
 class RetrofitService(private val gson: Gson, private val okHttpClient: OkHttpClient) {
 

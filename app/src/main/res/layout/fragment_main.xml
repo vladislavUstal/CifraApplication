@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="ru.vladislav.cifraapplication.ui.main.MainViewModel" />
+            type="ru.vladislav.cifraapplication.presentation.viewModel.main.MainViewModel" />
 
         <import type="android.view.View" />
 
@@ -17,7 +17,7 @@
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.main.MainFragment">
+        tools:context=".presentation.fragment.main.MainFragment">
 
         <TextView
             android:id="@+id/tv_error"

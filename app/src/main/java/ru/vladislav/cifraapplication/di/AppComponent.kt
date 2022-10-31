@@ -3,7 +3,8 @@ package ru.vladislav.cifraapplication.di
 import android.app.Application
 import dagger.BindsInstance
 import dagger.Component
-import ru.vladislav.cifraapplication.ui.main.MainViewModel
+import ru.vladislav.cifraapplication.domain.useCase.GetBankListUseCase
+import ru.vladislav.cifraapplication.presentation.viewModel.main.MainViewModel
 import javax.inject.Singleton
 
 @Singleton
@@ -21,7 +22,10 @@ interface AppComponent {
         ): AppComponent
     }
 
-
+    //viewModels
     fun inject(viewModel: MainViewModel)
+
+    //UseCases
+    fun inject(useCase: GetBankListUseCase)
 
 }
